@@ -1,0 +1,49 @@
+<!DOCTYPE html5>
+<html>
+<head>
+    <title>Name that color! SASS & LESS</title>
+    <link rel="stylesheet" href="style/main.css">
+    <script type="text/javascript" src="js/ntc.js"></script>
+</head>
+<body class="color-names">
+    <header class="color-names__title text-center">
+        Name that color! SASS & LESS
+    </header>
+    <section class="color-names__content">
+        <form name="colorForm" id="colorForm" class="color-form">
+            <div class="color-form__input-group">
+                <label for="format">SASS like format?</label>
+                <input type="radio" name="format" value="sass" />
+            </div>
+            <div class="color-form__input-group">
+                <label for="format">LESS like format?</label>
+                <input type="radio" name="format" value="less" />
+            </div>
+            <div class="color-form__input-group">
+                <label for="hexa-code">Color code</label>
+                <input type="text" placeholder="#FFFFFF" name="hexa-code" id="hexa-code" />
+            </div>
+            <div class="color-form__input-group">
+                <label for="custom-code">Pick custom color</label>
+                <input type="color" name="custom-code" id="custom-code" />
+            </div>
+            <div class="color-form__message color-form__message--success" id="success">
+                <div>Color name <span id="colorName" class="color-form__color-name"></span> copied to clipboard.
+                <span class="color-form__message--tip">"Ctrl + v" and paste it anywhere!</span></div>
+            </div>
+            <div class="color-form__message color-form__message--error" id="error">
+                <b>Error</b> Please provide a valid color code.
+            </div>
+            <div class="text-center">
+                <button class="color-form__submit-button" type="submit">
+                    Name that color!
+                </button>
+            </div>
+        </form>
+    </section>
+    <footer class="color-names__footer">
+        Developed by <a target="_blank" href="http://twitter.com/nicolasepiscopo">@nicolasepiscopo</a> | Based on <a href="http://chir.ag/projects/ntc/">ntc js</a>
+    </footer>
+    <script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>

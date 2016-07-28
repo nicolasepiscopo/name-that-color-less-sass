@@ -1,0 +1,74 @@
+.color-names {
+  padding: 0;
+  margin: 0;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 14px;
+}
+.color-names__title {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: #348783;
+  color: #FFFFFF;
+  letter-spacing: 1.3px;
+}
+.color-names__content {
+  padding: 10px;
+}
+.color-names__footer {
+  text-align: center;
+  font-size: 0.8em;
+  padding: 10px;
+}
+.color-names__footer a {
+  text-decoration: none;
+}
+.color-names__footer a:visited,
+.color-names__footer a:hover,
+.color-names__footer a:active {
+  text-decoration: none;
+  color: #348783;
+}
+.color-names .color-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.color-names .color-form__input-group {
+  padding: 10px;
+}
+.color-names .color-form__input-group label {
+  display: inline-block;
+  min-width: 150px;
+}
+.color-names .color-form__message {
+  padding: 10px;
+  margin: 10px 0;
+}
+.color-names .color-form__message--error {
+  background-color: #ffcecf;
+  border: 1px solid #ff3e3e;
+  display: none;
+}
+.color-names .color-form__message--success {
+  background-color: #ccf5cb;
+  border: 1px solid #148717;
+  display: none;
+}
+.color-names .color-form__message--tip {
+  font-size: 0.95em;
+  font-weight: bold;
+}
+.color-names .color-form__submit-button {
+  background-color: #ccc;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 30px;
+  margin: 30px auto;
+}
+.color-names .color-form__color-name {
+  text-decoration: underline;
+}
+.color-names .text-center {
+  text-align: center;
+}
