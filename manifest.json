@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Name that color! SASS & LESS",
+  "name": "Name that color! LESS & SASS",
   "description": "This extension asks for an hexadecimal color code and retrives a scss or less color variable name.",
   "version": "0.1",
   "browser_action": {
