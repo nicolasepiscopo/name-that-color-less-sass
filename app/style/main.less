@@ -1,5 +1,10 @@
 @import 'colors.import.less';
 
+html,
+body {
+    height: 200px;
+}
+
 .color-names {
     padding: 0;
     margin: 0;
@@ -26,9 +31,8 @@
         padding: 10px;
 
         a {
-            text-decoration: none;
-
             &:visited,
+            &:link,
             &:hover,
             &:active {
                 text-decoration: none;
@@ -38,6 +42,7 @@
     }
 
     .color-form {
+        min-width: 250px;
         max-width: 500px;
         margin: 0 auto;
 
@@ -47,6 +52,10 @@
             label {
                 display: inline-block;
                 min-width: 150px;
+            }
+
+            input {
+                max-width: 70px;
             }
         }
 

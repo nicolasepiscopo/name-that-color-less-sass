@@ -1,3 +1,7 @@
+html,
+body {
+  height: 200px;
+}
 .color-names {
   padding: 0;
   margin: 0;
@@ -21,16 +25,15 @@
   font-size: 0.8em;
   padding: 10px;
 }
-.color-names__footer a {
-  text-decoration: none;
-}
 .color-names__footer a:visited,
+.color-names__footer a:link,
 .color-names__footer a:hover,
 .color-names__footer a:active {
   text-decoration: none;
   color: #348783;
 }
 .color-names .color-form {
+  min-width: 250px;
   max-width: 500px;
   margin: 0 auto;
 }
@@ -40,6 +43,9 @@
 .color-names .color-form__input-group label {
   display: inline-block;
   min-width: 150px;
+}
+.color-names .color-form__input-group input {
+  max-width: 70px;
 }
 .color-names .color-form__message {
   padding: 10px;

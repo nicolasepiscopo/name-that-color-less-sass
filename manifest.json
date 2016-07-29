@@ -9,6 +9,7 @@
   },
   "permissions": [
     "activeTab",
+    "clipboardWrite",
     "https://ajax.googleapis.com/"
   ]
 }

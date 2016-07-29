@@ -1,6 +1,8 @@
 'use strict';
 
 (function() {
+    loadUserPreferences();
+
     $e('#colorForm').addEventListener('submit', function(e) {
         e.preventDefault();
         var colorName;
@@ -10,13 +12,21 @@
         var hexaCode = $e('#hexa-code') ? $e('#hexa-code').value : null;
         var customCode = $e('#custom-code') ? $e('#custom-code').value : null;
 
-        var colorCode = hexaCode ? hexaCode : customCode;
+        saveUserPreferences({
+            format: format
+        });
+
+        var colorCode = hashIfNeeded(hexaCode ? hexaCode : customCode);
 
         if(colorCode && validateCode(colorCode)) {
             colorName = getColorName(colorCode);
 
             if(format) {
-                colorName = ((format === 'less') ? lessPrefix : sassPrefix)  + colorName + '-color: ' + colorCode + ';';
+                if(format === 'less'){
+                    colorName = lessPrefix + colorName + '-color: ' + colorCode + ';';
+                } else if(format === 'sass') {
+                    colorName = sassPrefix + colorName + '-color: ' + colorCode + ';';
+                }
             }
 
             $e('#colorName').innerHTML = colorName;
@@ -35,6 +45,33 @@
         e.clipboardData.setData('text/plain', colorName);
         e.preventDefault();
     });
+
+    function hashIfNeeded(colorCode) {
+        if(colorCode && (colorCode[0] !== '#')){
+            colorCode = '#' + colorCode;
+        }
+        return colorCode.toUpperCase();
+    }
+
+    function saveUserPreferences(preferences) {
+        localStorage.setItem(
+            'preferences',
+            JSON.stringify(preferences)
+        );
+    }
+
+    function loadUserPreferences() {
+        var preferences = localStorage.getItem('preferences');
+        if(preferences) {
+            preferences = JSON.parse(preferences);
+            loadUserPreferencesInView(preferences);
+        }
+    }
+
+    function loadUserPreferencesInView(preferences) {
+        // Check format
+        $e('input[value="' + preferences.format + '"]').checked = true;
+    }
 
     function validateCode(code) {
         return /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(code);
