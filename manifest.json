@@ -8,8 +8,6 @@
     "default_popup": "app/main.html"
   },
   "permissions": [
-    "activeTab",
-    "clipboardWrite",
-    "https://ajax.googleapis.com/"
+    "clipboardWrite"
   ]
 }
