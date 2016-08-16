@@ -1,0 +1,8 @@
+@import '../../../styles/colors.import';
+
+.error-message {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: $cosmos-color;
+    border: 1px solid $coral-red-color;
+}

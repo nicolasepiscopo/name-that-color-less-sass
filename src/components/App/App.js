@@ -7,9 +7,9 @@ const Footer = require('../Footer/Footer');
 const Form = require('../Form/Form');
 
 const App = () => (
-    <div>
+    <div className="app">
         <Header />
-        <section className="color-names__content">
+        <section className="app__content">
             <Form />
         </section>
         <Footer />

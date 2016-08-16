@@ -1,0 +1,11 @@
+@import '../../styles/colors.import';
+
+.header {
+    border-bottom: 1px solid $silver-color;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    background-color:  $paradiso-color;
+    color: $white-color;
+    letter-spacing: 1.3px;
+}

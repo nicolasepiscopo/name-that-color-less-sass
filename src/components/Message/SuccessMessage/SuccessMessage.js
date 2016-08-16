@@ -5,14 +5,14 @@ const { PropTypes } = require('react');
 
 const SuccessMessage = (props) => {
     return (
-        <div className="color-form__message color-form__message--error" id="error">
+        <div className="success-message" id="success">
             {props.children}
         </div>
     );
-}
+};
 
-SuccessMessage.PropTypes = {
+SuccessMessage.propTypes = {
     children: PropTypes.any.isRequired
-}
+};
 
 module.exports = SuccessMessage;

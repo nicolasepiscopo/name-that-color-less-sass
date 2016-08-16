@@ -1,95 +1,10 @@
-@import '../../styles/colors.import.scss';
+@import '../../styles/colors.import';
 
-.color-names {
-    padding: 0;
-    margin: 0;
+.app {
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 14px;
 
-    &__title {
-        border-bottom: 1px solid $silver-color;
-        padding: 10px;
-        text-align: center;
-        margin-bottom: 10px;
-        background-color:  $paradiso-color;
-        color: $white-color;
-        letter-spacing: 1.3px;
-    }
-
     &__content {
         padding: 10px;
-    }
-
-    &__footer {
-        text-align: center;
-        font-size: 0.8em;
-        padding: 10px;
-
-        a {
-            &:visited,
-            &:link,
-            &:hover,
-            &:active {
-                text-decoration: none;
-                color: $paradiso-color;
-            }
-        }
-    }
-
-    .color-form {
-        min-width: 250px;
-        max-width: 500px;
-        margin: 0 auto;
-
-        &__input-group {
-            padding: 10px;
-
-            label {
-                display: inline-block;
-                min-width: 150px;
-            }
-
-            input {
-                max-width: 70px;
-            }
-        }
-
-        &__message {
-            padding: 10px;
-            margin: 10px 0;
-
-            &--error {
-                background-color: $cosmos-color;
-                border: 1px solid $coral-red-color;
-                display: none;
-            }
-
-            &--success {
-                background-color: $blue-romance-color;
-                border: 1px solid $bilbao-color;
-                display: none;
-            }
-
-            &--tip {
-                font-size: 0.95em;
-                font-weight: bold;
-            }
-        }
-
-        &__submit-button{
-            background-color: $silver-color;
-            border: 0;
-            padding: 10px 20px;
-            border-radius: 30px;
-            margin: 30px auto;
-        }
-
-        &__color-name{
-            text-decoration: underline;
-        }
-    }
-
-    .text-center {
-        text-align: center;
     }
 }

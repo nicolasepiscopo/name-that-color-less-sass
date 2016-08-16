@@ -3,36 +3,34 @@ require('./Input.scss');
 const React = require('react');
 const { PropTypes } = require('react');
 
-const Input = (props) => {
+class Input extends React.Component {
+    render() {
+        const {type, name, label, value, className, checked, placeholder, onChange, onKeyUp} = this.props;
 
-    const { type, name, label, value, className, placeholder, onChange } = props;
+        let classNames = 'input-group';
+        if (className) {
+            classNames = `${classNames} ${className}`;
+        }
 
-    let classNames = 'color-form__input-group';
-    if(className) {
-        classNames = `${classNames} ${className}`
+        return (
+            <div className={classNames}>
+                <label htmlFor={name} className="input-group__label">{label}</label>
+                <input className="input-group__input" type={type} name={name} checked={checked} value={value} placeholder={placeholder} onChange={onChange} onKeyUp={onKeyUp} />
+            </div>
+        );
     }
-
-    function handleOnChange(e) {
-        if(onChange)
-            onChange(e.target.value);
-    }
-
-    return (
-        <div className={classNames}>
-            <label for={name}>{label}</label>
-            <input type={type} name={name} value={value} placeholder={placeholder} onChange={handleOnChange} />
-        </div>
-    );
 }
 
-Input.PropTypes = {
-    type: PropTypes.str,
-    name: PropTypes.str,
-    label: PropTypes.str,
-    value: PropTypes.str,
-    className: PropTypes.str,
-    placeholder: PropTypes.str,
-    onChange: PropTypes.func
-}
+Input.propTypes = {
+    type: PropTypes.string,
+    name: PropTypes.string,
+    label: PropTypes.string,
+    value: PropTypes.string,
+    className: PropTypes.string,
+    placeholder: PropTypes.string,
+    checked: PropTypes.bool,
+    onChange: PropTypes.func,
+    onKeyUp: PropTypes.func
+};
 
 module.exports = Input;

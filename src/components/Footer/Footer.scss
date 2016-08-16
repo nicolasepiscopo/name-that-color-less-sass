@@ -1,0 +1,17 @@
+@import '../../styles/colors.import';
+
+.footer {
+    text-align: center;
+    font-size: 0.8em;
+    padding: 10px;
+
+    &__link {
+        &:visited,
+        &:link,
+        &:hover,
+        &:active {
+            text-decoration: none;
+            color: $paradiso-color;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@import '../../../styles/colors.import';
+
+.input-group {
+    padding: 10px;
+
+    &__label {
+        display: inline-block;
+        min-width: 150px;
+    }
+
+    &__input {
+        max-width: 70px;
+    }
+}
